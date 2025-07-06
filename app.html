@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prime Land for Sale</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #f4f8fb, #e9f0f5);
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(to right, #004466, #00aaff);
+      color: white;
+      padding: 60px 20px 40px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      max-width: 150px;
+      display: block;
+      margin: 0 auto 20px;
+      border-radius: 8px;
+    }
+
+    header h1 {
+      font-size: 2.6em;
+      margin: 0;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .listing {
+      background: #fff;
+      margin-bottom: 60px;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .listing:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #004466;
+      font-size: 2em;
+      border-bottom: 2px solid #00aaff;
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+    }
+
+    .details {
+      background: #f9fbfc;
+      border-left: 5px solid #00aaff;
+      padding: 20px 25px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    .details p {
+      margin: 10px 0;
+      font-size: 1.05em;
+      line-height: 1.6;
+    }
+
+    .contact {
+      font-size: 1.1em;
+      font-weight: 600;
+      color: white;
+      background: linear-gradient(to right, #d9534f, #c9302c);
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 30px;
+      margin-top: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: background 0.3s ease;
+    }
+
+    .contact:hover {
+      background: #b52b27;
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 25px;
+      background: #f2f7fb;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .image-gallery img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .image-gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    video {
+      margin-top: 30px;
+      width: 100%;
+      max-width: 700px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .pagination {
+      text-align: center;
+      margin: 60px 0;
+    }
+
+    .pagination a {
+      background: #004466;
+      color: white;
+      padding: 12px 24px;
+      margin: 10px;
+      border-radius: 8px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .pagination a:hover {
+      background: #00aaff;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .listing {
+        padding: 25px;
+      }
+
+      .contact {
+        font-size: 1em;
+        padding: 10px 20px;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+    }
+
+    #whatsapp-chat {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 1000;
+      width: 60px;
+      height: 60px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    #whatsapp-chat:hover {
+      transform: scale(1.1);
+    }
+
+    #whatsapp-chat img {
+      width: 32px;
+      height: 32px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.jpg" alt="Company Logo" class="logo" />
+    <h1>Prime Land for Sale</h1>
+  </header>
+
+  <div class="container">
+    <div class="listing">
+      <h2>Commercial Plot for Sale - Ruaka</h2>
+      <div class="details">
+        <p><strong>Size:</strong> 69 x 60 ft, touching tarmac</p>
+        <p><strong>Services:</strong> Serviced by two roads. Sewer, power, and water on site</p>
+        <p><strong>Suitability:</strong> Suitable for apartments and commercials</p>
+      </div>
+      <p class="contact">Asking Price: 17M | Call: 0722 827890</p>
+      <div class="image-gallery">
+        <img src="ruaka1.jpg" alt="Ruaka Plot Image 1" />
+        <img src="ruaka2.jpg" alt="Ruaka Plot Image 2" />
+        <img src="ruaka3.jpg" alt="Ruaka Plot Image 3" />
+      </div>
+    </div>
+
+    <div class="listing">
+      <h2>Commercial Plot for Sale - Kamakis Corner</h2>
+      <div class="details">
+        <p><strong>Size:</strong> 72 x 66 ft, 60 metres from tarmac</p>
+        <p><strong>Services:</strong> Near Total and Shell petrol stations, Jujys Mahogany, and behind Kwa Guka</p>
+        <p><strong>Suitability:</strong> Suitable for apartments or a godown</p>
+      </div>
+      <p class="contact">Asking Price: 14M | Call: 0722 827890</p>
+      <div class="image-gallery">
+        <img src="kamakis1.jpg" alt="Kamakis Plot Image 1" />
+        <img src="kamakis2.jpg" alt="Kamakis Plot Image 2" />
+      </div>
+      <video src="kamakisvideo.mp4" controls></video>
+    </div>
+  </div>
+
+  <div class="pagination">
+    <a href="#">Previous</a>
+    <a href="#">Next</a>
+  </div>
+
+  <a href="https://wa.me/254722827890" target="_blank" id="whatsapp-chat">
+    <img src="https://img.icons8.com/ios-filled/50/25D366/whatsapp.png" alt="Chat on WhatsApp">
+  </a>
+<script src="index.js"></script>
+</body>
+</html>
